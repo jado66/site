@@ -1,3 +1,3 @@
 # Jadon Erwin's Website
 
-Click [here](https://github.com/facebook/create-react-app) for my website.
+Click [here](https://jado66.github.io/site/) for my website.
