@@ -1,7 +1,9 @@
 # Jadon Erwin's Website
 
 Click [here](https://jado66.github.io/site/) for my website.
-Click [here](https://jado66.github.io/vr) for my VR portfolio
+
+Click [here](https://jado66.github.io/vr) for my VR portfolio.
+
 TODOs:
 - Add graph creator with simple style controls
 - Add in "Shape" ID
