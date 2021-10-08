@@ -112,8 +112,10 @@ export function VRPage(props){
          {/* <Camera position={[camX,camY,camZ]} /> */}
          <ambientLight />
             <pointLight position={[10, 10, 10]} />
-            <Box position={[-1.2, 0, -10]} />
-            <Box position={[1.2, 0, -10]} /> {/* All your regular react-three-fiber elements go here */}
+            <Box position={[-2, 0, -10]} />
+            <Box position={[0, 0, -5]} /> 
+            <Box position={[-2, 0, 0]} />
+
             <DefaultXRControllers />
         </VRCanvas>
     </div>
