@@ -52,6 +52,9 @@ export function VRPage(props){
     useEffect(() => { // load once
         // Update the document title using the browser API
         addCanvasEvents();
+        player.position.x = 0;
+        player.position.y = 0;
+        player.position.z = 0;
       }, []);
 
     useEffect(() => {
