@@ -1,9 +1,7 @@
 import React,{ useRef, useState, useEffect }  from 'react';
 import { Link } from "react-router-dom";
-import { VRCanvas, useXR } from '@react-three/xr'
+import { DefaultXRControllers,VRCanvas, useXR } from '@react-three/xr'
 import { Canvas,extend,useFrame, useThree } from '@react-three/fiber'
-
-
 
 function Box(props) {
     // This reference will give us direct access to the THREE.Mesh object
@@ -39,7 +37,7 @@ function CameraControls(props) {
 }
 
 export function VRPage(props){
-    const { player } = useXR();
+    // const { gl, camera } = useThree()
     const [upKeyDown, setUpKeyDown] = useState(false);
     const [rightKeyDown, setRightKeyDown] = useState(false);
     const [downKeyDown, setDownKeyDown] = useState(false);
@@ -52,25 +50,22 @@ export function VRPage(props){
     useEffect(() => { // load once
         // Update the document title using the browser API
         addCanvasEvents();
-        player.position.x = 0;
-        player.position.y = 0;
-        player.position.z = 0;
       }, []);
 
-    useEffect(() => {
-        if(upKeyDown){
-            setCamZ(camZ-.001);
-        }
-        else if(downKeyDown){
-            setCamZ(camZ+.001);
-        };
-        if(rightKeyDown){
-            setCamX(camX+.001);
-        }
-        else if(leftKeyDown){
-            setCamX(camX-.001);
-        };
-    }); // update
+    // useEffect(() => {
+    //     if(upKeyDown){
+    //         setCamZ(camZ-.001);
+    //     }
+    //     else if(downKeyDown){
+    //         setCamZ(camZ+.001);
+    //     };
+    //     if(rightKeyDown){
+    //         setCamX(camX+.001);
+    //     }
+    //     else if(leftKeyDown){
+    //         setCamX(camX-.001);
+    //     };
+    // }); // update
 
     function addCanvasEvents(){
         document.addEventListener("keydown", (e)=>{
@@ -119,6 +114,7 @@ export function VRPage(props){
             <pointLight position={[10, 10, 10]} />
             <Box position={[-1.2, 0, 0]} />
             <Box position={[1.2, 0, 0]} /> {/* All your regular react-three-fiber elements go here */}
+            <DefaultXRControllers />
         </VRCanvas>
     </div>
     )
