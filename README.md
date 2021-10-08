@@ -13,3 +13,4 @@ TODOs:
   - One room I want it to be black with a white (very visible) paper airplane that flies itself around following a path from the "The Nature of Code" textbook.
   - The house wraps around itself using teleport to appear as if it is non-euclideon geometry. 
     - You go up the stairs to the "upstairs" but end up back on the main floor appearing from the basement stairs and vice versa. Teleport happens midway through. 
+  - Another room should have a paint splatter cannon (which you can pick up and move to wherever including hitting the paper airplane out of the sky lol) and inside the room will be different geometric walls to make the paint splatter more interesting.
