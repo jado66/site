@@ -1,6 +1,6 @@
 import React,{ useRef, useState, useEffect }  from 'react';
 import { Link } from "react-router-dom";
-import { VRCanvas } from '@react-three/xr'
+import { VRCanvas, useXR } from '@react-three/xr'
 import { Canvas,extend,useFrame, useThree } from '@react-three/fiber'
 
 
@@ -39,6 +39,7 @@ function CameraControls(props) {
 }
 
 export function VRPage(props){
+    const { player } = useXR();
     const [upKeyDown, setUpKeyDown] = useState(false);
     const [rightKeyDown, setRightKeyDown] = useState(false);
     const [downKeyDown, setDownKeyDown] = useState(false);
