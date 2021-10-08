@@ -256,12 +256,12 @@ export class GameBoy extends React.Component{
       var extraButtons = null;
       if (this.extraButtonProps){
         extraButtons = this.extraButtonProps.map((button) =>
-        <AdvButton onClick = {button.onClick} width={"150px"} height={"50px"} text = {button.text}></AdvButton>
+        <AdvButton key = {this.state.name+button.text} onClick = {button.onClick} width={"150px"} height={"50px"} text = {button.text}></AdvButton>
         );
       }
      
       return(
-      <div className="demoDiv div3DBottom" style={{width:"1202px", border:"1px solid #EEE4E8", backgroundColor:"#4BB2B9", margin:"auto", borderRadius:"10px"}} >
+      <div className="demoDiv div3DBottom" style={{width:"1202px", border:"1px solid #EEE4E8", backgroundColor:"#4BB2B9", marginRight:"auto", marginLeft:"auto", borderRadius:"10px"}} >
         <div style={{position:"relative"}}>
           <canvas id = {canvasName} className="div3DTop" width="1180px" height="600px" style={{border:"1px solid white", backgroundColor:this.backgroundColor, margin:"10px", borderRadius:"10px"}} />
           <div style={{position:"absolute",color:'white',top:20,right:20, fontSize:"20px"}}>

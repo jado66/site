@@ -7,7 +7,7 @@ import { GameBoy } from './components/gameBoy';
 import { GravityDemo } from './demos/physicsDemos/gravityDemo';
 import { FlappyBirdDemo } from './demos/gameDemos/flappyDemo';
 import { AsteriodDemo } from './demos/gameDemos/asteriods';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 
 // import canvasGame from 
@@ -83,19 +83,20 @@ const Mainpage = () => {
       <div id = "AboutDiv" className = "section">
         <h1>About</h1>
       </div>
-      <div id = "ServicesDiv" className = "section">
-        <h1>Services</h1>
-      </div>
       <div id = "PortfolioDiv" className = "section">
         <h1>Portfolio</h1>
         All demos in the porftolio are interactable. Click on a demo to begin.
         <h3>Physics Demos</h3>
-        {/* <GravityDemo/> */}
+        <GravityDemo/>
         <h3>Game Dev Demos</h3>
-        {/* <FlappyBirdDemo/> */}
-        {/* <AsteriodDemo/> */}
+        <FlappyBirdDemo/>
+        <AsteriodDemo/>
       </div>
-      
+      <div id = "VRDiv" className = "section">
+        <h1>Enter VR Portfolio</h1>
+        <Link to="/vr">VR</Link>
+
+      </div>
       <div id = "ContactDiv" className = "section">
         <h1>Contact</h1>
       </div>
