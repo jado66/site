@@ -15,3 +15,4 @@ TODOs:
     - You go up the stairs to the "upstairs" but end up back on the main floor appearing from the basement stairs and vice versa. Teleport happens midway through. 
   - Another room should have a paint splatter cannon (which you can pick up and move to wherever including hitting the paper airplane out of the sky lol) and inside the room will be different geometric walls to make the paint splatter more interesting.
   - A non-euclidean maze would be freaking awesome
+  - Maybe a surprise jumpscare in the VR world would be hilarious
