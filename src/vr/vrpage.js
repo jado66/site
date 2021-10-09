@@ -2,6 +2,33 @@ import React,{ useRef, useState, useEffect }  from 'react';
 import { Link } from "react-router-dom";
 import { DefaultXRControllers,VRCanvas, useXR } from '@react-three/xr'
 import { Canvas,extend,useFrame, useThree } from '@react-three/fiber'
+import { useGLTF } from '@react-three/drei'
+
+
+
+function Airplane(props){
+    const group = useRef()
+    const { nodes, materials } = useGLTF('/scene.gltf')
+    return (
+        <group ref={group} {...props} dispose={null}>
+        <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Curve007_1.geometry}
+            material={materials['Material.001']}
+        />
+        <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Curve007_2.geometry}
+            material={materials['Material.002']}
+        />
+        </group>
+    )
+}
+
+useGLTF.preload('/scene.gltf')
+
 
 function Box(props) {
     // This reference will give us direct access to the THREE.Mesh object
@@ -9,6 +36,7 @@ function Box(props) {
     // Set up state for the hovered and active state
     const [hovered, setHover] = useState(false)
     const [active, setActive] = useState(false)
+
     // Subscribe this component to the render-loop, rotate the mesh every frame
     useFrame((state, delta) => (ref.current.rotation.x += 0.01))
     // Return the view, these are regular Threejs elements expressed in JSX
@@ -21,6 +49,7 @@ function Box(props) {
         onPointerOver={(event) => setHover(true)}
         onPointerOut={(event) => setHover(false)}>
         <boxGeometry args={[1, 1, 1]} />
+
         <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
       </mesh>
     )
@@ -115,7 +144,7 @@ export function VRPage(props){
             <Box position={[-2, 0, -10]} />
             <Box position={[0, 0, -5]} /> 
             <Box position={[-2, 0, 0]} />
-
+            {/* <Airplane/> */}
             <DefaultXRControllers />
         </VRCanvas>
     </div>

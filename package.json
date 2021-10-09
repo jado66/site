@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-three/drei": "^7.13.1",
     "@react-three/fiber": "^7.0.12",
     "@react-three/xr": "^3.2.0",
     "@testing-library/jest-dom": "^5.14.1",
