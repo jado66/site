@@ -95,6 +95,8 @@ const Mainpage = () => {
       <div id = "VRDiv" className = "section">
         <h1>Enter VR Portfolio</h1>
         <Link to="/vr">VR</Link>
+        <h1>Enter VR Test</h1>
+        <a href="../vrplain/vrpage2.html">VR</a>
 
       </div>
       <div id = "ContactDiv" className = "section">
